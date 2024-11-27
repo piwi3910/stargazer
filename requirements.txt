@@ -1,0 +1,8 @@
+PyQt6>=6.0.0
+numpy>=1.24.3
+opencv-python>=4.8.0
+astropy>=5.0.0
+astroalign>=2.4.0
+photutils>=1.5.0
+ccdproc>=2.4.0
+scikit-image>=0.19.0
