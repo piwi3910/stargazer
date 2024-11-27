@@ -21,6 +21,14 @@ Stargazer is a powerful astrophotography processing application that provides ad
 
 ## Installation
 
+### Option 1: Windows Executable
+
+1. Download the latest release from the [Releases](https://github.com/yourusername/stargazer/releases) page
+2. Extract the ZIP file
+3. Run `stargazer.exe`
+
+### Option 2: From Source
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/stargazer.git
@@ -38,12 +46,28 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+## Building from Source
+
+### Windows Executable
+
+1. Run the build script:
+```bash
+build_windows.bat
+```
+
+This will:
+- Create a virtual environment
+- Install dependencies
+- Package the application using PyInstaller
+- Create a standalone executable in `dist/stargazer/`
+
+The executable will include all necessary dependencies and can be run on any Windows system without requiring Python installation.
+
 ## Usage
 
 1. Launch the application:
-```bash
-python src/main.py
-```
+   - Windows executable: Double-click `stargazer.exe`
+   - From source: Run `python src/main.py`
 
 2. Load your images:
    - Click "Open Files" to select light frames
@@ -71,6 +95,7 @@ stargazer/
 │   ├── image_processor.py  # Core processing logic
 │   └── main.py            # Application entry point
 ├── requirements.txt        # Python dependencies
+├── build_windows.bat       # Windows build script
 └── README.md              # This file
 ```
 
@@ -118,3 +143,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - [Astropy](https://www.astropy.org/) for FITS file handling
 - [AstroAlign](https://astroalign.readthedocs.io/) for image registration
 - [PyQt6](https://www.riverbankcomputing.com/software/pyqt/) for the user interface
+- [PyInstaller](https://www.pyinstaller.org/) for creating standalone executables
